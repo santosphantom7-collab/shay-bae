@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Your Spider-Man 🕷️❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom, #0b1a2a, #1a1a2e);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 40px 20px;
+        line-height: 1.8;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ff3c3c;
+        font-size: 2.5rem;
+    }
+
+    .quote {
+        font-style: italic;
+        color: #ff9f9f;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .heart {
+        text-align: center;
+        font-size: 2rem;
+        margin: 20px 0;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    .timer {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 30px;
+        color: #00d4ff;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        font-style: italic;
+        color: #aaa;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hey Shay 🕷️❤️</h1>
+
+    <p>
+        I’m not really used to this 50/50 type of love… I’ve never been that guy.
+        I’m the type that goes all in… no hesitation, no half-steps, no holding back.
+    </p>
+
+    <p>
+        And with you? I’m all in. Completely. No safety net.
+    </p>
+
+    <p>
+        Funny thing is… the more you try to push me away, the stronger I come back 😭
+        Like seriously… it’s like you’re testing physics or something, because the further you go,
+        the harder I bounce back to you.
+    </p>
+
+    <p>
+        You’re my world… and honestly, I don’t even fully understand what that means yet.
+        I just know everything feels better with you in it.
+    </p>
+
+    <p>
+        I wish you’d stop trying to push me away and just… accept it.
+        Accept that I’m here. And I’m not going anywhere.
+    </p>
+
+    <p>
+        I love you.
+    </p>
+
+    <div class="quote">"With great power comes great responsibility… and loving you is a responsibility I actually want."</div>
+    <div class="quote">"I may be Spider-Man, but you’re the only thing that keeps me grounded."</div>
+    <div class="quote">"No matter how far I swing, I always find my way back to you."</div>
+
+    <div class="heart">❤️</div>
+
+    <p>
+        So… how about this?
+        Give me your heart.
+        I promise… I’m not gonna break it.
+    </p>
+
+    <p>
+        But hey… maybe I’m being too much sometimes.
+        So I’m gonna take a small step back this week.
+    </p>
+
+    <p>
+        Not because I don’t care… but because I care enough to give you space too.
+    </p>
+
+    <div class="timer" id="countdown"></div>
+
+    <p style="text-align:center; margin-top:20px;">
+        I’ll call you on Saturday ❤️
+    </p>
+
+    <p style="text-align:center;">
+        Take care of yourself, okay?
+        Your Spider-Man is always just one call away 🕷️
+    </p>
+
+    <div class="footer">
+        — From your Spider-Man 🕸️
+    </div>
+</div>
+
+<script>
+    function updateCountdown() {
+        const now = new Date();
+        const target = new Date();
+
+        // Set target to next Saturday
+        target.setDate(now.getDate() + ((6 - now.getDay() + 7) % 7));
+        target.setHours(20, 0, 0, 0); // 8PM Saturday
+
+        const diff = target - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerHTML =
+            `⏳ Countdown till I call you: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
